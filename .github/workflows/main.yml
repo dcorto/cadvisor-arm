@@ -33,4 +33,4 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
 
       - name: Build image
-        run: docker buildx build --platform ${{ DOCKER_TARGET_PLATFORM }} --tag ${{ DOCKER_IMAGE }} .
+        run: docker buildx build --platform ${DOCKER_TARGET_PLATFORM} --tag ${DOCKER_IMAGE} .
