@@ -1,0 +1,29 @@
+name: Docker Build & Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_REGISTRY: docker.io # https://hub.docker.com registry
+      DOCKER_IMAGE: thedavis/cadvisor-arm
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      DOCKER_TARGET_PLATFORM: linux/arm/v7
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: latest
+
+      - name: Builder instance name
+        run: echo ${{ steps.buildx.outputs.name }}
+
+      - name: Available platforms
+        run: echo ${{ steps.buildx.outputs.platforms }}  
