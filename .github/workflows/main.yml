@@ -27,3 +27,4 @@ jobs:
 
       - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
+        
