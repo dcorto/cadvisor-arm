@@ -12,8 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DOCKER_IMAGE: thedavis/cadvisor-arm
 
     steps:
       - name: Checkout
@@ -23,7 +21,10 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: ${DOCKER_IMAGE}
+          images: thedavis/cadvisor-arm
+          tag-semver: |
+            {{version}}
+            {{major}}.{{minor}}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
