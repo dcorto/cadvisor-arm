@@ -2,9 +2,6 @@ name: Docker Build & Publish
 
 on:
   push:
-    branches:
-      - master
-      - test-github-actions
     tags:
       - 'v*'
     pull_request:
