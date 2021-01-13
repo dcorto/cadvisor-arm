@@ -26,11 +26,10 @@ jobs:
         with:
           version: latest
 
-      - name: Builder instance name
-        run: echo ${{ steps.buildx.outputs.name }}
-
-      - name: Available platforms
-        run: echo ${{ steps.buildx.outputs.platforms }}
+      - name: Docker Login
+        if: success()
+        run: |
+        echo "${DOCKER_PASSWORD}" | docker login ${DOCKER_REGISTRY} --username "${DOCKER_USERNAME}" --password-stdin
 
       - name: Build image
         run: docker buildx build --platform ${DOCKER_TARGET_PLATFORM} --tag ${DOCKER_IMAGE} .
