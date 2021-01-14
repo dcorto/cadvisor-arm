@@ -23,7 +23,8 @@ This package compile official [google/cadvisor](https://github.com/google/cadvis
 
 **NOTE:** Tag corresponds to the version of cAdvisor
 
-* `0.35.0`, `latest` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.35.0/Dockerfile)
+* `0.36.0`, `latest` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.36.0/Dockerfile)
+* `0.35.0` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.35.0/Dockerfile)
 
 The best (and recommended) way how to use this package is as [Docker image](https://hub.docker.com/repository/docker/thedavis/cadvisor-arm).
 
