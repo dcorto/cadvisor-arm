@@ -4,7 +4,7 @@ cAdvisor docker image build for ARM devices (for example: Raspberry PI).
 
 This package is based on official [google/cadvisor](https://github.com/google/cadvisor)
 
-![Docker Build & Publish](https://github.com/dcorto/cadvisor-arm/workflows/Docker%20Build%20&%20Publish/badge.svg)
+[![](https://github.com/dcorto/cadvisor-arm/workflows/Docker%20Build%20&%20Publish/badge.svg)](https://github.com/dcorto/cadvisor-arm/actions)
 
 ## Content
 
