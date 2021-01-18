@@ -6,6 +6,9 @@ This package is based on official [google/cadvisor](https://github.com/google/ca
 
 [![](https://github.com/dcorto/cadvisor-arm/workflows/Docker%20Build%20&%20Publish/badge.svg)](https://github.com/dcorto/cadvisor-arm/actions)
 
+[![](https://img.shields.io/docker/image-size/thedavis/cadvisor-arm/0.37.0)](#)
+[![](https://img.shields.io/docker/pulls/thedavis/cadvisor-arm)](#)
+
 ## Content
 
 * [How it works](#how-it-works)
@@ -25,12 +28,13 @@ This package compile official [google/cadvisor](https://github.com/google/cadvis
 
 **NOTE:** Tag corresponds to the version of cAdvisor
 
-* `0.36.0`, `0.36` `latest` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.36.0/Dockerfile)
+* `0.37.0`, `0.37`, `latest` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.37.0/Dockerfile)
+* `0.36.0`, `0.36` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.36.0/Dockerfile)
 * `0.35.0`, `0.35` - [(Dockerfile)](https://github.com/dcorto/cadvisor-arm/blob/v0.35.0/Dockerfile)
 
 The best (and recommended) way how to use this package is as [Docker image](https://hub.docker.com/repository/docker/thedavis/cadvisor-arm).
 
-```shell
+```shellscript
 docker run \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:rw \
@@ -67,7 +71,7 @@ services:
 
 Or you can use custom build on your ARM (Raspberry PI) device.
 
-```shell
+```shellscript
 git clone git@github.com:dcorto/cadvisor-arm.git
 cd cadvisor-arm
 docker build -t <image name> .
