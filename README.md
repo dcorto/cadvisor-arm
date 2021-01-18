@@ -44,7 +44,7 @@ docker run \
   --publish=8080:8080 \
   --detach=true \
   --name=cadvisor \
-  budry/cadvisor-arm:latest
+  thedavis/cadvisor-arm:latest
 ```
 
 I trying update build of this package as soon as possible for each [google/cadvisor](https://github.com/google/cadvisor) update, but when you need more actual version I recommend you use custom build.
@@ -73,8 +73,11 @@ Or you can use custom build on your ARM (Raspberry PI) device.
 
 ```shellscript
 git clone git@github.com:dcorto/cadvisor-arm.git
+
 cd cadvisor-arm
+
 docker build -t <image name> .
+
 docker run \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:rw \
